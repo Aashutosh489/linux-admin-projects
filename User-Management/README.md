@@ -1,0 +1,31 @@
+###  This demonstrates Hands on User-Management using commands like `useradd`,`passwd`,`usermod`,and`userdel and More
+ 
+1) create a new user 
+ sudo useradd Aashutosh
+
+2)set or change password
+ sudo passwd Aashutosh
+
+3)check useraccount property 
+ sudo grep Aashutosh /etc/passwd
+
+4)check useraccount password property
+ sudo grep Aashutosh /etc/shadow
+
+5)Delete user account
+ sudo userdel -r Aashutosh
+
+6)Lock user password
+ sudo usermod -L Aashutosh
+
+7)Unlock user password
+ sudo usermod -U Aashutosh
+
+8)set user comment line 
+ sudo usermod -C linuxadmin Aashutosh
+
+9)Set user account maximum day,minimum day and warning in a password
+ sudo chage -M 60 -m 20 -W 2 Aashutosh
+
+10) Seen user password and warning status 
+ sudo chage -l Aashutosh
