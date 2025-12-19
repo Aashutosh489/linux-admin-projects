@@ -11,7 +11,7 @@
 
 4)check useraccount password property
  sudo grep Aashutosh /etc/shadow
-
+ 
 5)Delete user account
  sudo userdel -r Aashutosh
 
