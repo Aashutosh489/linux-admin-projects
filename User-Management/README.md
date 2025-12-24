@@ -1,68 +1,67 @@
-## THIS PROJECT DEMONSTRATES LINUX USER AND GROUP MANAGEMENT BY USING COMMANDS
- 
-* STEPS FOR MANAGE USER ACCOUNT 
+## This project demonstrates linux user and group management by using commands  or steps to manage user account
 
-1) CREATE USER ACCOUNT  
+
+1) create user account  
 
  # useradd AASHUTOSH
 
-2) SET USER PASSWORD
+2) set user passwd
 
  # passwd AASHUTOSH
 
-3) DELETE USER ACCOUNT 
+3) delete user account 
 
  # userdel -r AASHUTOSH
 
-4) LOCK USER PASSWORD
+4) lock user passwd
 
  # usermod -L AASHUTOSH
 
-5) UNLOCK USER PASSWORD
+5) unlock user passwd
 
  # usermod -U AASHUTOSH
 
-6) SET USER COMMENT LINE 
+6) set user comment line
 
  # usermod -C linuxadmin AASHUTOSH
 
-7) SEE USER ACCOUNT MAXDAY/minday/warning
+7) see user account maxday/minday/warning
 
  # chage -l AASHUTOSH
 
-8) SET USER ACCOUNT MAXDAY/minday/warning
+8) set user account maxday/minday/warning
 
  # chage -M 60 -m 20 -W 2 AASHUTOSH
 
-9) SEE USER ACCOUNT PROPERTY 
+9) see user account property
  
  # cat /etc/passwd or grep AASHUTOSH /etc/passwd
 
-10)SEE USER PASSWD PROPERTY
+10) see user passwd property
 
  # cat /etc/shadow or grep AASHUTOSH /etc/passwd
 
-11) HOW TO ADD GROUP IN A SYSTEM
+11) add group in a system
 
  # groupadd linuxadmin 
 
-12) ADD MULTIPLE USER ON GROUP
+12) add multiple user on group
 
  # gpasswd -M AASHUTOSH,RITIK,SHARMA linuxadmin
 
-13) MAKE GROUP ADMIN
+13) make group admin
 
  # gpasswd -A AASHUTOSH linuxadmin
 
-14) CHECK GROUP PROPERTY  
+14) check group property
 
  # cat /etc/group or grep linuxadmin /etc/group
 
-15) CHECK GROUP ADMIN PROPERTY
+15) check group admin property 
 
  # cat /etc/gshadow or grep linuxadmin /etc/gshadow
 
-16) ADD USER ON A GROUP
+16) add user on a group 
 
  # usermod -ag linuxadmin AASHUTOSH
 
