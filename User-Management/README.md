@@ -10,67 +10,67 @@ markdown table
 
 1) create user account  
 
- # useradd AASHUTOSH
+ 'useradd AASHUTOSH'
 
 2) set user passwd
 
- # passwd AASHUTOSH
+ 'passwd AASHUTOSH'
 
 3) delete user account 
 
- # userdel -r AASHUTOSH
+ 'userdel -r AASHUTOSH'
 
 4) lock user passwd
 
- # usermod -L AASHUTOSH
+  ' usermod -L AASHUTOSH'
 
 5) unlock user passwd
 
- # usermod -U AASHUTOSH
+  'usermod -U AASHUTOSH'
 
 6) set user comment line
 
- # usermod -C linuxadmin AASHUTOSH
+   'usermod -C linuxadmin AASHUTOSH'
 
 7) see user account maxday/minday/warning
 
- # chage -l AASHUTOSH
+  'chage -l AASHUTOSH'
 
 8) set user account maxday/minday/warning
 
- # chage -M 60 -m 20 -W 2 AASHUTOSH
+  chage -M 60 -m 20 -W 2 AASHUTOSH
 
 9) see user account property
  
- # cat /etc/passwd or grep AASHUTOSH /etc/passwd
+  'cat /etc/passwd or grep AASHUTOSH /etc/passwd'
 
 10) see user passwd property
 
- # cat /etc/shadow or grep AASHUTOSH /etc/passwd
+  'cat /etc/shadow or grep AASHUTOSH /etc/passwd'
 
 11) add group in a system
 
- # groupadd linuxadmin 
+  'groupadd linuxadmin' 
 
 12) add multiple user on group
 
- # gpasswd -M AASHUTOSH,RITIK,SHARMA linuxadmin
+  'gpasswd -M AASHUTOSH,RITIK,SHARMA linuxadmin'
 
 13) make group admin
 
- # gpasswd -A AASHUTOSH linuxadmin
+  'gpasswd -A AASHUTOSH linuxadmin'
 
 14) check group property
 
- # cat /etc/group or grep linuxadmin /etc/group
+  'cat /etc/group or grep linuxadmin /etc/group'
 
 15) check group admin property 
 
- # cat /etc/gshadow or grep linuxadmin /etc/gshadow
+  'cat /etc/gshadow or grep linuxadmin /etc/gshadow'
 
 16) add user on a group 
 
- # usermod -ag linuxadmin AASHUTOSH
+  'usermod -ag linuxadmin AASHUTOSH'
 
 
  
