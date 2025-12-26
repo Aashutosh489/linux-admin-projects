@@ -6,7 +6,6 @@ A hands-on demonstration of Linux user and group management using command-line t
 - Demonstrated secure password handling and account lifecycle
 - Useful for onboarding automation and server access control
 
-markdown table
 
 1) create user account  
 
