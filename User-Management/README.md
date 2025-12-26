@@ -1,5 +1,12 @@
-## This project demonstrates linux user and group management by using commands  or steps to manage user account
+# Linux User Management via CLI
+A hands-on demonstration of Linux user and group management using command-line tools. Ideal for system administrators and support engineers.
 
+## 🔍 Project Outcome
+- Created and managed user accounts using CLI tools
+- Demonstrated secure password handling and account lifecycle
+- Useful for onboarding automation and server access control
+
+markdown table
 
 1) create user account  
 
