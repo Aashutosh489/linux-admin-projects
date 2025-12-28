@@ -176,5 +176,7 @@ sleep 100 & runs in background, and jobs shows it.
  sleep 100 &
  fg %1
 Brings job 1 to foreground.
+
 bg %1
+
 Sends job 1 to background again.
