@@ -77,7 +77,7 @@ But Linux also has 3 special permissions:
 2. Setgid (Set Group ID)
 3. Sticky Bit
 1 Setuid (Set User ID)
-í ½When applied to a file, it allows any user to run the file with the file ownerâ€™s 
+When applied to a file, it allows any user to run the file with the file ownerâ€™s 
 permission.
 ï‚· Commonly used on programs that need root power (like /usr/bin/passwd).
 Example:
@@ -93,8 +93,8 @@ Numeric:
 ï‚·`chmod 4755 filename`
 (4 = Setuid, 755 = normal permissions)
 2 Setgid (Set Group ID)
-í ½When applied to a file, it runs with the fileâ€™s group permission.
-í ½When applied to a directory, new files created inside get the same group as the directory 
+When applied to a file, it runs with the fileâ€™s group permission.
+When applied to a directory, new files created inside get the same group as the directory 
 (not the creatorâ€™s group).
 Example:
 `ls -ld mydir`
@@ -108,8 +108,8 @@ Numeric:
 ï‚· Example:
 ï‚· `chmod 2755 mydir`
 3 Sticky Bit
-í ½Mostly used on shared directories like /tmp.
-í ½It means: only the owner of a file can delete/rename it, even if others have write 
+Mostly used on shared directories like /tmp.
+It means: only the owner of a file can delete/rename it, even if others have write 
 permission on the directory.
 Example:
 `ls -ld /tmp`
