@@ -26,16 +26,41 @@ Example: A terminated process whose parent hasn’t collected its exit status.
 
 :Important Process Commands
 
-Command               Purpose                        Example
-Ps               Show process status                 ps -ef
-top            Live view of processes top
-htop          Advanced top (if installed)            htop
-jobs          Show background jobs jobs
-fg            Bring job to foreground                fg %1
-bg           Run job in background                   bg %1
-kill           Kill a process                       kill -9 PID
-nice      Start a process with priority          nice -n 10 command
-renice   Change priority of running process      renice -n 5 -p PID
+1. SHOW PROCESS STATUS
+  
+   ps -ef
+
+2. LIVE VIEW OF PROCESSES
+
+   top
+
+3. ADVANCED TOP
+
+   htop
+
+4. SHOW BACKGROUND JOBS
+
+   jobs
+
+5. BRING JOB TO FOREGROUND
+
+   fg%1
+
+6. RUN JOB IN BACKGROUND
+
+   bg%1
+
+7. KILL A PROCESS
+
+   kill -9
+
+8. START A PROCESS WITH PRIORITY
+
+  nice -n 10 command
+
+9. CHANGING PRIORITY OF RUNNING PROCESS
+
+  renice -n 5 -p pid
 
 :Reserved Process IDs
 
