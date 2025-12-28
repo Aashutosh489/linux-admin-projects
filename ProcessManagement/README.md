@@ -25,17 +25,19 @@ Example: A terminated process whose parent hasn’t collected its exit status.
 6. Defunct – Same as zombie (dead process but entry remains).
 
 :Important Process Commands
-Command Purpose Example
-Ps Show process status ps -ef
-top Live view of processes top
-htop Advanced top (if installed) htop
-jobs Show background jobs jobs
-fg Bring job to foreground fg %1
-bg Run job in background bg %1
-kill Kill a process kill -9 PID
-nice Start a process with priority nice -n 10 command
-renice Change priority of running process renice -n 5 -p PID
+Command              Purpose                        Example
+Ps              Show process status                  ps -ef
+top            Live view of processes                 top
+htop         Advanced top (if installed)              htop
+jobs          Show background jobs jobs
+fg            Bring job to foreground                 fg %1
+bg            Run job in background                   bg %1 
+kill         Kill a process                        kill -9 PID
+nice     Start a process with priority           nice -n 10 command
+renice   Change priority of running process      renice -n 5 -p PID
+
 :Reserved Process IDs
+
  PID 0 → Kernel process (scheduler)
  PID 1 → init (first process, parent of all)
  PID 2 → kthreadd (kernel thread handler)
