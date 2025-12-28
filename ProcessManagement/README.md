@@ -28,39 +28,39 @@ Example: A terminated process whose parent hasn’t collected its exit status.
 
 1. SHOW PROCESS STATUS
   
-   ps -ef
+   `ps -ef`
 
 2. LIVE VIEW OF PROCESSES
 
-   top
+   `top`
 
 3. ADVANCED TOP
 
-   htop
+   `htop`
 
 4. SHOW BACKGROUND JOBS
 
-   jobs
+   `jobs`
 
 5. BRING JOB TO FOREGROUND
 
-   fg%1
+   `fg%1`
 
 6. RUN JOB IN BACKGROUND
 
-   bg%1
+   `bg%1`
 
 7. KILL A PROCESS
 
-   kill -9
+   `kill -9`
 
 8. START A PROCESS WITH PRIORITY
 
-  nice -n 10 command
+  `nice -n 10 command`
 
 9. CHANGING PRIORITY OF RUNNING PROCESS
 
-  renice -n 5 -p pid
+  `renice -n 5 -p pid`
 
 :Reserved Process IDs
 
