@@ -63,12 +63,14 @@ Changing umask:
 ---------------
 - Temporary (current shell only):
 umask 0027
+
 - Permanent (for all users):
 Edit the file: /etc/profile
 
 
 :Linux Special Permissions 
 Normally, we have:
+
  r = read
  w = write
  x = execute
