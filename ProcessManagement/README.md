@@ -117,25 +117,35 @@ Shows available and used memory.
 Example:
 
 free –m  showing date in Mb
+
 free –g  showing date in Gb
 
 Output fields:
 
  total – Total memory
+
  used – Memory in use
+
  free – Unused memory
+
  shared – Memory shared between processes
+
  buff/cache – Memory used for buffers and cache
+
  available – Memory available for new processes
 
 :nice Command (Process Priority)
 
  Linux assigns a priority to processes.
+
  Range: -20 (highest priority) → +19 (lowest priority).
+
  Default nice value = 0.
+
 Examples:
 
 nice -n 10 yes # Start yes with lower priority
+
 renice -n -5 -p 1234 # Increase priority of process with PID 1234
 
 Types of Processes
