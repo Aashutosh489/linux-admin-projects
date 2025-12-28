@@ -25,17 +25,7 @@ Example: A terminated process whose parent hasn’t collected its exit status.
 6. Defunct – Same as zombie (dead process but entry remains).
 
 :Important Process Commands
-<<<<<<< HEAD
-Command              Purpose                        Example
-Ps              Show process status                  ps -ef
-top            Live view of processes                 top
-htop         Advanced top (if installed)              htop
-jobs          Show background jobs jobs
-fg            Bring job to foreground                 fg %1
-bg            Run job in background                   bg %1 
-kill         Kill a process                        kill -9 PID
-nice     Start a process with priority           nice -n 10 command
-=======
+
 Command               Purpose                        Example
 Ps               Show process status                 ps -ef
 top            Live view of processes top
@@ -45,7 +35,6 @@ fg            Bring job to foreground                fg %1
 bg           Run job in background                   bg %1
 kill           Kill a process                       kill -9 PID
 nice      Start a process with priority          nice -n 10 command
->>>>>>> f570cbf (README.md)
 renice   Change priority of running process      renice -n 5 -p PID
 
 :Reserved Process IDs
