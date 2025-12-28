@@ -80,6 +80,7 @@ But Linux also has 3 special permissions:
 3. Sticky Bit
 
 1 Setuid (Set User ID)
+
 When applied to a file, it allows any user to run the file with the file owner’s 
 permission.
  Commonly used on programs that need root power (like /usr/bin/passwd).
