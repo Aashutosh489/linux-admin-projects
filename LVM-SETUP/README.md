@@ -16,19 +16,22 @@ Advantages of LVM:
 Step 1: Check New Disk on the Server
 
 When you attach a new disk to the Linux system, check if the system detects it.
+
 Command 1:
 
 `lsblk`
 
 Explanation:
-
 Shows block devices (disks and partitions) in a tree structure.
+
 Example output:
+
 NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
 sda 8:0 0 40G 0 disk
 â”œâ”€sda1 8:1 0 38G 0 part /
 â””â”€sda2 8:2 0 2G 0 part [SWAP]
 sdb 8:16 0 10G 0 disk
+
 Here sdb is a new 10GB disk (unpartitioned).
 
 Command 2:
@@ -36,9 +39,10 @@ Command 2:
 `sudo fdisk -l`
 
 Explanation:
-
 Lists all disks and partitions with details like size, type, sector info.
+
 Step 2: Create a Partition on the New Disk (optional)
+
 If the new disk is completely free (like /dev/sdb), create a single LVM partition.
 
 Command:
@@ -47,19 +51,19 @@ Command:
 
 Inside fdisk:
 
-create new partition
+n â†’ create new partition
 
-pí ¾í ¾í ¾â†’í ¾primary partition
+p â†’ primary partition
 
-1 â†’í ¾partition number
+1 â†’ partition number
 
 (press Enter for default sectors)
 
-tí ¾í ¾í ¾â†’í ¾changeí ¾type
+t â†’ changetype
 
-8eí ¾í ¾â†’í ¾LVMí ¾type
+8e â†’ LVM type
 
-wí ¾í ¾í ¾â†’í ¾write and save
+w â†’ write and save
 
 Then verify:
 
@@ -68,6 +72,7 @@ Then verify:
 âœ…You should see /dev/sdb1 created.
 
 Step 3: Create Physical Volume (PV)
+
 A PV is the base layer where LVM starts.
 It marks the partition as usable by LVM.
 
