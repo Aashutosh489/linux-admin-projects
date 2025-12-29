@@ -10,7 +10,9 @@ top of it.
 Advantages of LVM:
 
  Resize partitions easily (extend or reduce)
+
  Combine multiple disks into one large volume
+
  Better disk management for servers
 
 Step 1: Check New Disk on the Server
@@ -27,9 +29,13 @@ Shows block devices (disks and partitions) in a tree structure.
 Example output:
 
 NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+
 sda 8:0 0 40G 0 disk
+
 ├─sda1 8:1 0 38G 0 part /
+
 └─sda2 8:2 0 2G 0 part [SWAP]
+
 sdb 8:16 0 10G 0 disk
 
 Here sdb is a new 10GB disk (unpartitioned).
