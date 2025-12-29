@@ -69,31 +69,48 @@ Edit the file: /etc/profile
 
 
 :Linux Special Permissions 
-Normally, we have:
+
+normally, we have:
 
  r = read
+
  w = write
+
  x = execute
+
 But Linux also has 3 special permissions:
+
 1. Setuid (Set User ID)
+
 2. Setgid (Set Group ID)
+
 3. Sticky Bit
 
 1 Setuid (Set User ID)
 
 When applied to a file, it allows any user to run the file with the file owner’s 
 permission.
+
  Commonly used on programs that need root power (like /usr/bin/passwd).
+
 Example:
+
 ls -l /usr/bin/passwd
+
 -rwsr-xr-x 1 root root 54256 Aug 7 12:34 /usr/bin/passwd
+
  Notice s in owner’s execute place (rws).
+
  Means: even a normal user can run passwd as root (file owner).
 Symbolic:
+
 `chmod u+s filename`
 Numeric:
+
  Setuid = 4
+
  Example:
+
 `chmod 4755 filename`
 (4 = Setuid, 755 = normal permissions)
 
@@ -102,16 +119,25 @@ Numeric:
 When applied to a file, it runs with the file’s group permission.
 When applied to a directory, new files created inside get the same group as the directory 
 (not the creator’s group).
+
 Example:
+
 `ls -ld mydir`
+
 drwxr-sr-x 2 user developers 4096 Sep 24 12:00 mydir
+
  Notice s in group’s execute place (r-s).
+
  Means: files created in mydir will belong to developers group.
 Symbolic:
+
 `chmod g+s mydir`
 Numeric:
+
  Setgid = 2
+
  Example:
+
  `chmod 2755 mydir`
 
 3 Sticky Bit
@@ -119,28 +145,46 @@ Numeric:
 Mostly used on shared directories like /tmp.
 It means: only the owner of a file can delete/rename it, even if others have write 
 permission on the directory.
+
 Example:
+
 `ls -ld /tmp`
+
 drwxrwxrwt 10 root root 4096 Sep 24 12:05 /tmp
+
  Notice t at the end (rwt).
+
  Means: Only file owners can delete their own files.
 Symbolic:
 `chmod +t mydir`
 Numeric:
+
  Sticky bit = 1
+
  Example:
+
  `chmod 1777 mydir`
+
 🧮Quick Numeric Summary
+
  Setuid = 4xxx
+
  Setgid = 2xxx
+
  Sticky = 1xxx
+
 For example:
+
  4755 → Setuid + normal 755
+
  2755 → Setgid + normal 755
+
  1777 → Sticky + normal 777
 
 : So in short:
 
  Setuid = run as file owner
+
  Setgid = run as file group (or inherit group in directories)
+
  Sticky = only ownerr can delete own files
