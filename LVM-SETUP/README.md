@@ -31,11 +31,8 @@ Example output:
 NAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
 
 sda 8:0 0 40G 0 disk
-
 ├─sda1 8:1 0 38G 0 part /
-
 └─sda2 8:2 0 2G 0 part [SWAP]
-
 sdb 8:16 0 10G 0 disk
 
 Here sdb is a new 10GB disk (unpartitioned).
