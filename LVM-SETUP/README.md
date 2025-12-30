@@ -176,3 +176,50 @@ Check updated VG info:
 
 `vgs`
 
+step 9: Reduce LVM (Logical Volume Manager)
+ 
+If your lv have free space or extra space so we reduce that space so this called 
+LVM or LV reduce.
+
+First: Check disk size 
+
+ `df -hPT`
+
+After see lv:
+
+ `lvs` or `lvscsan`
+
+After we umount the lvpath or fs path:
+
+ `umount lvpath` or `umount -f lvpath`
+
+If umount don,t run properly so we check which user are inside the lvpath
+so we use these commands:
+
+`lsof fspath` or `fuser -cu fspath`
+
+After we check our file system is proper or not,inode ,data structure in our
+file system is ok or not so we use this command and if something is wrong so
+this command fix it: 
+
+ `e2fsck lvpath` or `e2fsck -f lvpath`
+
+After we resize file system or lvpath suppose we reduce file system 5gb to 3g:
+
+ `resize2fs lvpath 3g`
+
+Last one is lv reduce command:
+
+ `lvreduce -L 3G lvpath`
+
+for verify:
+
+ `lvs` or `lvscan`
+
+And after repeatly we run command:
+
+ `e2fsck`
+
+Last step of this process:
+ 
+`mount -a`
