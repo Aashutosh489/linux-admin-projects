@@ -223,3 +223,38 @@ And after repeatly we run command:
 Last step of this process:
  
 `mount -a`
+
+IF WE HAVE 3 DISK /DEV/SDA /DEV/SDB AND  /DEV/SDC AND ONE OF THEM ARE FAILED SO SUPPOSE
+/DEV/SDA IS FAILED SO WE MIGRATE THE DATA OF /DEV/SDA TO /DEV/SDC SO WE USE THIS CMD:
+
+`pvmove /dev/sda /dev/sdc`
+
+After I delete or format the fail disk into my vg and pv:
+
+. `vgremove /dev/sda/`
+
+. `pvremove /dev/sda`
+
+
+ Swap extended steps:
+
+  `swapoff -a`- if we use that command so our swap is off.
+
+  `free -g` - This command show memory and swap space in GB.
+  
+  `lvcreate -L 1g -n new_swap_vol vg` - This command create a lv with name of new_swap_vol and lv size is 1g.
+  
+  `lvs` or `lvscan`- After we create a lv we verify it with lvs command.
+
+  `mkswap lvpath`- This command work is connect lv or file system to swap space.
+
+  `vi /etc/fstab` - After all previous process we entry our lvpath in vi/etc/fstab after the entry
+                    the mounting is permanent like below.
+
+                 lvpath   swap    swap    default      0     0   
+
+  `swapon -v lvpath` - This command on the swap space and add 1g to existing swap space.
+
+  `free -g` - This command work is to check and verify our swap space.
+
+
