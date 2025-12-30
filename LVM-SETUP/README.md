@@ -181,24 +181,24 @@ step 9: Reduce LVM (Logical Volume Manager)
 If your lv have free space or extra space so we reduce that space so this called 
 LVM or LV reduce.
 
-First: Check disk size 
+.First: Check disk size 
 
  `df -hPT`
 
-After see lv:
+.After see lv:
 
  `lvs` or `lvscsan`
 
-After we umount the lvpath or fs path:
+. And After we umount the lvpath or fs path:
 
  `umount lvpath` or `umount -f lvpath`
 
-If umount don,t run properly so we check which user are inside the lvpath
+.If umount don,t run properly so we check which user are inside the lvpath
 so we use these commands:
 
 `lsof fspath` or `fuser -cu fspath`
 
-After we check our file system is proper or not,inode ,data structure in our
+.After we check our file system is proper or not,inode ,data structure in our
 file system is ok or not so we use this command and if something is wrong so
 this command fix it: 
 
@@ -224,7 +224,7 @@ Last step of this process:
  
 `mount -a`
 
-IF WE HAVE 3 DISK /DEV/SDA /DEV/SDB AND  /DEV/SDC AND ONE OF THEM ARE FAILED SO SUPPOSE
+.IF WE HAVE 3 DISK /DEV/SDA /DEV/SDB AND  /DEV/SDC AND ONE OF THEM ARE FAILED SO SUPPOSE
 /DEV/SDA IS FAILED SO WE MIGRATE THE DATA OF /DEV/SDA TO /DEV/SDC SO WE USE THIS CMD:
 
 `pvmove /dev/sda /dev/sdc`
@@ -236,7 +236,7 @@ After I delete or format the fail disk into my vg and pv:
 . `pvremove /dev/sda`
 
 
- Swap extended steps:
+#Swap extended steps:
 
   `swapoff -a`- if we use that command so our swap is off.
 
@@ -256,5 +256,20 @@ After I delete or format the fail disk into my vg and pv:
   `swapon -v lvpath` - This command on the swap space and add 1g to existing swap space.
 
   `free -g` - This command work is to check and verify our swap space.
+
+#Second method to swap extend:
+
+  `dd if=/dev/zero of=/swapfile bs=1M count=1024` - This command create a file that file name is swapfile and this 
+                                                    file storage is 1g .
+
+  `mkswap /swapfile`- This command connect swapfile to swapspace.
+
+  `vi /etc/fstab`- for permanent entry of swapfile we open /etc/fstab and write
+
+                    /swapfile    swap     swap    defaults    0    0
+
+  `mount -a` - after a specific entry in fstab we run mount -a for a refreshment.
+
+  `swapon -a` - This command work is to show swap space after running `free -g command`
 
 
