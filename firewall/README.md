@@ -44,4 +44,44 @@ this device is installed between your computer network and the internet. A hardw
 . firewall controls or restricts all incoming traffic except the traffic that is coming in response 
   of any requests, by default on clients(pc) it does not allow any unattended traffic to come in. it drop such traffic
 
+# firewall zones in linux:
+
+The predefined zones are stored in usr/lib/firewalld/zones directory and can be instantly applied to any
+available network interface. These files are copied to the /etc/firewalld/zones/ directory only after they are
+modified. the default setting of the predefined zones are as follow:
+
+Block:
+
+Any incoming network connections are rejected with an icmp-host prohibited message for ipv4 and icmp6-adm 
+-prohibited for ipv6. only network connection initiated from with in the system are possible.
+
+DmZ:
+
+for computers in your demilitarized zone that are publicly accessible with limited access to your internal 
+network. only selected incoming connections are selected
+
+Drop:
+
+Any incoming network packets are dropped without any notifications. only outgoing network connections are possible.
+
+External:
+
+for use on external networks with masquerading enabled, especially for routers. you do not trust the other computers
+on the network to not harm your computer. only selected incoming connections are selected.
+
+Home:
+
+for use at home when you mostly trust the other computers on the network. only selected incoming connections are 
+selected.
+
+Internal:
+
+for user on internal network when you mostly trust the other computers on the network. only selected incoming 
+connections are accepted.
+
+Trusted:
+
+All network connections are accepted.
+
+ 
 
