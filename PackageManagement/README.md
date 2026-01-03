@@ -21,19 +21,19 @@ This repository provides step by step examples of how to manage packages effecti
 
 1) check package info
 
-dnf info <package name>
+`dnf info packagename`
 
 2) how to install a package
 
-dnf install -y packagename
+`dnf install -y packagename`
 
 3) how to remove a package
 
-dnf remove -y packagename
+`dnf remove -y packagename`
 
 4) how to update all package
 
-dnf update
+`dnf update`
 
 
 
