@@ -1,0 +1,7 @@
+Script started on 2026-01-03 16:02:01+05:30 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="118" LINES="32"]
+]0;ritik@localhost:/[?2004h[root@localhost /]# pvcreae[Kte /dev/sdb
+[?2004l  Physical volume "/dev/sdb" successfully created.
+]0;ritik@localhost:/[?2004h[root@localhost /]# exit
+[?2004lexit
+
+Script done on 2026-01-03 16:02:22+05:30 [COMMAND_EXIT_CODE="0"]
