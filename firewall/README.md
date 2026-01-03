@@ -83,5 +83,55 @@ Trusted:
 
 All network connections are accepted.
 
- 
+# firewall commands
+
+1) how to check firewall status
+
+`systemctl status firewalld`
+
+2) how to stop firewall 
+
+`systemctl stop firewalld`
+
+3) how to start firewall
+
+`systemctl restart firewalld`
+
+4) how to permanent on firewall 
+
+`systemctl enable firewall`
+
+5) how to permanent off firewall
+
+`systemctl disable firewall`
+
+6) check firewall zone(default)
+
+`firewall-cmd --list-all-zones
+
+7) show firewall default zone
+
+`firewall-cmd --get-default-zone
+
+8) set firewall default zone
+
+`firewall-cmd --set-default-zone`
+
+9) remove service from firewall
+
+`firewall-cmd --permanent-remove-service=http`
+
+10) Add service into firewall
+
+`firewall-cmd --permanent-add-service=http`
+
+12) Reload service from firewall
+
+`firewall-cmd --reload`
+
+13) Add port into firewall
+
+`firewall-cmd --permanent --add-port=80/tcp`
+
+`firewall-cmd --permanent --remove-port=80/tcp`
 
